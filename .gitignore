@@ -1,0 +1,5 @@
+.env
+docker/data/*
+
+!docker/data/README.md
+!docker/data/.gitkeep

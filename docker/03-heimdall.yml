@@ -1,0 +1,15 @@
+---
+version: "2.1"
+services:
+  heimdall:
+    image: lscr.io/linuxserver/heimdall
+    container_name: heimdall
+    user: ${DOCKER_USER}
+      - TZ=Europe/London
+    volumes:
+      - ${STORAGE}/heimdall:/config
+      - ${STORAGE}/test.txt:/test.txt
+    # ports:
+    #   - 80:80
+    #   - 443:443
+    restart: unless-stopped

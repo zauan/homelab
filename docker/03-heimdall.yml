@@ -4,8 +4,7 @@ services:
   heimdall:
     image: lscr.io/linuxserver/heimdall
     container_name: heimdall
-    user: ${DOCKER_USER}
-      - TZ=Europe/London
+    user: ${PUID}:${GUID}
     volumes:
       - ${STORAGE}/heimdall:/config
       - ${STORAGE}/test.txt:/test.txt
